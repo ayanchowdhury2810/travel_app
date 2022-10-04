@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/Misc/colors.dart';
+import 'package:travel_app/widgets/app_buttons.dart';
 import 'package:travel_app/widgets/app_large_text.dart';
 
 import '../widgets/app_text.dart';
@@ -12,6 +13,7 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+  int gottenStars = 3;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,13 +93,40 @@ class _DetailPageState extends State<DetailPage> {
                             5,
                             (index) {
                               return Icon(Icons.star,
-                                  color: AppColors.startcolor);
+                                  color: index < gottenStars
+                                      ? AppColors.startcolor
+                                      : AppColors.textColor2);
                             },
                           ),
                         ),
                         SizedBox(height: 10),
                         AppText(text: "(4.0)", color: AppColors.textColor2),
                       ],
+                    ),
+                    SizedBox(height: 25),
+                    AppLargeText(
+                      text: "People",
+                      color: Colors.black.withOpacity(0.8),
+                      size: 20,
+                    ),
+                    SizedBox(height: 5),
+                    AppText(
+                      text: "Number of people in your group",
+                      color: AppColors.mainTextColor,
+                    ),
+                    Wrap(
+                      children: List.generate(
+                        5,
+                        (index) {
+                          return AppButtons(
+                            size: 50,
+                            backgroundColor: AppColors.buttonBackground,
+                            color: Colors.red,
+                            borderColor: AppColors.buttonBackground,
+                            isIcon: false,
+                          );
+                        },
+                      ),
                     )
                   ],
                 ),

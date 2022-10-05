@@ -13,7 +13,7 @@ class AppButtons extends StatelessWidget {
   bool? isIcon;
   AppButtons(
       {Key? key,
-      this.text,
+      this.text = 'hi',
       this.icon,
       this.isIcon = false,
       required this.size,
@@ -33,8 +33,8 @@ class AppButtons extends StatelessWidget {
         color: backgroundColor,
       ),
       child: isIcon == false
-          ? AppText(text: text!, color: Colors.black)
-          : Icon(icon, color: color),
+          ? Center(child: AppText(text: text!, color: color))
+          : Center(child: Icon(icon, color: color)),
     );
   }
 }

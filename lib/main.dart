@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travel_app/cubit/app_cubit_logics.dart';
 import 'package:travel_app/cubit/app_cubits.dart';
 import 'package:travel_app/pages/detail_page.dart';
+import 'package:travel_app/pages/home_page.dart';
 import 'package:travel_app/pages/navPages/main_page.dart';
 import 'package:travel_app/pages/welcome_page.dart';
 import 'package:travel_app/services/data_services.dart';
@@ -22,13 +23,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const WelcomePage(),
-      home: BlocProvider<AppCubits>(
-        create: (context) => AppCubits(
-          data: DataServices(),
-        ),
-        child: AppCubitLogics(),
-      ),
+      home: const DetailPage(),
+      // home: BlocProvider<AppCubits>(
+      //   create: (context) => AppCubits(
+      //     data: DataServices(),
+      //   ),
+      //   child: AppCubitLogics(),
+      // ),
     );
   }
 }

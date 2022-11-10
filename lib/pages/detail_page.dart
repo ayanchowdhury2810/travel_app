@@ -164,26 +164,66 @@ class _DetailPageState extends State<DetailPage> {
               ),
             ),
             Positioned(
-                bottom: 20,
-                left: 20,
-                right: 20,
-                child: Row(
-                  children: [
-                    AppButtons(
-                      size: 60,
-                      backgroundColor: Colors.white,
-                      color: AppColors.textColor1,
-                      borderColor: AppColors.textColor2,
-                      isIcon: true,
-                      icon: Icons.favorite_border,
+              bottom: 20,
+              left: 20,
+              right: 20,
+              child: Row(
+                children: [
+                  AppButtons(
+                    size: 60,
+                    backgroundColor: Colors.white,
+                    color: AppColors.textColor1,
+                    borderColor: AppColors.textColor2,
+                    isIcon: true,
+                    icon: Icons.favorite_border,
+                  ),
+                  SizedBox(width: 20),
+                  // ResponsiveButton(
+                  //   isResponsive: true,
+                  //   // width: 310,
+                  // )
+                  Container(
+                    child: Center(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 93, 105, 179),
+                          ),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                        ),
+                        child: (Container(
+                          width: 250,
+                          height: 60,
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 54.0),
+                                child: AppText(
+                                  text: "Book Trip Now",
+                                  color: Colors.white,
+                                ),
+                              ),
+                              Image.asset(
+                                'images/button-one.png',
+                                // margin: EdgeInsets.only(top: 100.0)
+                              ),
+                            ],
+                          ),
+                        )
+                            // Image.asset('images/button-one.png'),
+                            ),
+                      ),
                     ),
-                    SizedBox(width: 20),
-                    ResponsiveButton(
-                      isResponsive: true,
-                      // width: 310,
-                    )
-                  ],
-                ))
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),

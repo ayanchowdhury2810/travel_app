@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travel_app/Misc/colors.dart';
 import 'package:travel_app/cubit/app_cubit_states.dart';
 import 'package:travel_app/cubit/app_cubits.dart';
+import 'package:travel_app/pages/detail_page.dart';
 import 'package:travel_app/widgets/app_large_text.dart';
 import 'package:travel_app/widgets/app_text.dart';
 
@@ -100,9 +101,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         itemBuilder: (BuildContext context, int index) {
                           return GestureDetector(
                             onTap: () {
-                              BlocProvider.of<AppCubits>(context)
-                                  .detailPage(info[index]);
+                              DetailPage();
                             },
+                            // {
+                            //   BlocProvider.of<AppCubits>(context)
+                            //       .detailPage(info[index]);
+                            // },
                             child: Container(
                               margin: const EdgeInsets.only(right: 15, top: 10),
                               width: 200,

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travel_app/Misc/colors.dart';
-import 'package:travel_app/cubit/app_cubits.dart';
+// import 'package:travel_app/cubit/app_cubits.dart';
+import 'package:travel_app/pages/home_page.dart';
 // import 'package:flutter/rendering.dart';
 import 'package:travel_app/widgets/app_large_text.dart';
 import 'package:travel_app/widgets/app_text.dart';
@@ -67,18 +68,45 @@ class _WelcomePageState extends State<WelcomePage> {
                     const SizedBox(
                       height: 20,
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        BlocProvider.of<AppCubits>(context).getData();
-                      },
-                      child: Container(
-                        width: 200,
-                        child: Row(
-                          children: [
-                            ResponsiveButton(
-                              width: 120,
+                    // GestureDetector(
+                    //   onTap: () {
+                    //     BlocProvider.of<AppCubits>(context).getData();
+                    //   },
+                    //   child: Container(
+                    //     width: 200,
+                    //     child: Row(
+                    //       children: [
+                    //         ResponsiveButton(
+                    //           width: 120,
+                    //         ),
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),
+                    Container(
+                      child: Center(
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (BuildContext context) {
+                                  return const HomePage();
+                                },
+                              ),
+                            );
+                          },
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(
+                              Color.fromARGB(255, 93, 105, 179),
                             ),
-                          ],
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                            ),
+                          ),
+                          child: Image.asset('images/button-one.png'),
                         ),
                       ),
                     ),

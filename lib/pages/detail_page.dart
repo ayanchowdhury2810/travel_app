@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travel_app/Misc/colors.dart';
 import 'package:travel_app/widgets/app_buttons.dart';
 import 'package:travel_app/widgets/app_large_text.dart';
-import 'package:travel_app/widgets/responsive_button.dart';
+// import 'package:travel_app/widgets/responsive_button.dart';
 
 import '../widgets/app_text.dart';
 
@@ -19,6 +19,7 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // ignore: sized_box_for_whitespace
       body: Container(
         width: double.maxFinite,
         height: double.maxFinite,
@@ -56,7 +57,7 @@ class _DetailPageState extends State<DetailPage> {
                 padding: const EdgeInsets.only(left: 20, right: 20, top: 30),
                 width: MediaQuery.of(context).size.width,
                 height: 500,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),

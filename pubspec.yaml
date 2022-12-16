@@ -37,6 +37,7 @@ dependencies:
   flutter_bloc:
   equatable:
   http:
+  animated_splash_screen:
 
 dev_dependencies:
   flutter_test:

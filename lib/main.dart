@@ -4,6 +4,7 @@ import 'package:travel_app/pages/detail_page.dart';
 import 'package:travel_app/pages/home_page.dart';
 import 'package:travel_app/pages/navPages/main_page.dart';
 import 'package:travel_app/pages/welcome_page.dart';
+import 'package:travel_app/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const WelcomePage(),
+      home: Splash(),
+      // home: const WelcomePage(),
     );
   }
 }

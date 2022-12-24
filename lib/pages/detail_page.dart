@@ -71,10 +71,10 @@ class _DetailPageState extends State<DetailPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         AppLargeText(
-                          text: "text",
+                          text: "Price: ",
                           color: Colors.black.withOpacity(0.8),
                         ),
-                        AppLargeText(text: '\$ 250', color: AppColors.mainColor)
+                        AppLargeText(text: '₹ 250', color: AppColors.mainColor)
                       ],
                     ),
                     SizedBox(height: 10),
@@ -83,7 +83,7 @@ class _DetailPageState extends State<DetailPage> {
                         Icon(Icons.location_on, color: AppColors.mainColor),
                         SizedBox(height: 5),
                         AppText(
-                          text: "USA, California",
+                          text: "Shimla, India",
                           color: AppColors.textColor1,
                         ),
                       ],

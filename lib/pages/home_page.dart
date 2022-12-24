@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   var images = {
     "balloning.png": "Balloning",
     "hiking.png": "Hiking",
-    "kayaking.png": "Kayaking",
+    "rafting.png": "Rafting",
     "snorkling.png": "Snorkling"
   };
   @override
@@ -158,8 +158,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       SizedBox(height: 10),
                       Container(
                         child: AppText(
-                            text: images.values.elementAt(index),
-                            color: AppColors.textColor2),
+                          text: images.values.elementAt(index),
+                          color: AppColors.textColor2,
+                        ),
                       ),
                     ],
                   ),
